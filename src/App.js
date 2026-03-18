@@ -21,10 +21,10 @@ function App() {
     if (!verifyBlockchainDecree()) return;
 
     try {
-      const response = await axios.post('http://localhost:5000/v1/deploy-romance', {
-        intent: "Romance",
-        initial: initial
-      });
+      const response = await axios.post('https://project-pi-backend.onrender.com/v1/deploy-romance', {
+    intent: "Romance",
+    initial: initial
+});
       setStatus(response.data.status);
     } catch (error) {
       if (error.response) {
